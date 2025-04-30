@@ -2,12 +2,30 @@
 #define _STRING_ 1
 
 #include <stddef.h>
+#include <string.h>
 #include <sys/cdefs.h>
 
 class string {
   private:
+    char Str[100];
+
   public:
-    string();
+    string(const char *s);
+    string(string &);
+    string operator=(string s);
+    string operator+(string s);
+    string operator+=(string s);
+    string operator*(int s);
+    string operator*=(int s);
+    char  &operator[](int idx);
+
+    // Comparison operators
+    bool operator<=(string s);
+    bool operator==(string s);
+    bool operator<(string s);
+    bool operator>=(string s);
+    bool operator>(string s);
+    operator const char *();
 };
 
 #endif

@@ -1,6 +1,7 @@
 tmp**
 isodir
 sysroot
+.vscode
 
 *.bin
 *.iso
