@@ -1,11 +1,16 @@
 #ifndef _IOSTREAM_
 #define _IOSTREAM_ 1
 
+#include <kernel/tty.h>
+#include <string>
 #include <sys/cdefs.h>
+
 class ostream {
   private:
   public:
-    ostream();
+    ostream operator<<(string s);
+    ostream operator<<(char s);
+    ostream operator<<(long s);
 };
 
 #endif

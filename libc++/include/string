@@ -14,7 +14,8 @@ class string {
     string(string &);
     string operator=(string s);
     string operator+(string s);
-    string operator+=(string s);
+    string operator+=(string c);
+    string operator+=(char c);
     string operator*(int s);
     string operator*=(int s);
     char  &operator[](int idx);
@@ -27,5 +28,9 @@ class string {
     bool operator>(string s);
     operator const char *();
 };
+long   strtol(string s);
+string ltostr(long s);
+void   swap(char &a, char &b);
+string strrev(string s);
 
 #endif
